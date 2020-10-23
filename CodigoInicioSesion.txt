@@ -1,0 +1,59 @@
+package ventana;
+// para comenzar recomiendo aprender, motar codigo nosotros mismos, 
+// para no necesitar de programas como netbeans y plugins de eclipse
+ 
+//se inporta el color
+import java.awt.Color;
+ 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+//creamos la ventana (Jframe)
+public class ventana extends JFrame{
+// Incertamos los textos(Jtextfield), el boton(Jbutton) y el Jpanel.
+	JTextField texto1,texto2;
+	JButton boton1, boton2;
+	JPanel contentpane;
+	public ventana() {
+	//hacemos visible la ventana(Jframe) y le damos coordenadas donde aparezca	
+	setBounds(50, 20, 280, 180);
+    setVisible(true);
+	//Incertamos el panel(contenetpanel) y le damos color de fondo
+    contentpane = new JPanel();
+	contentpane.setBackground(Color.pink); //puedes cambiar el color aquí
+	setContentPane(contentpane);
+	contentpane.setLayout(null);
+	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	//Asignamos textos
+	texto1 = new JTextField();
+	texto2 = new JTextField();
+	//Asignamos botones
+	boton1 = new JButton();
+	boton2 = new JButton();
+	//insetamos los textos, les damos coordenadas y un texto
+	texto1.setBounds(50, 10, 160, 25);
+	contentpane.add(texto1);
+	texto1.setText("usuario");
+	//texto 2 metodo igual al anterior
+	texto2.setBounds(50, 40, 160, 25);
+	contentpane.add(texto2);
+	texto2.setText("contraseña");
+	//insetamos el boton, le damos coordenadas y un texto
+	boton1.setBounds(50, 110, 160, 25);
+	contentpane.add(boton1);
+	boton1.setText("OK");
+ 
+ 
+	}
+ 
+ 
+ 
+ 
+	public static void main(String args[]){
+	//inseta la ventana	
+	ventana v = new ventana();
+ 
+	}
+}
